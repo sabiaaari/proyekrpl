@@ -654,3 +654,391 @@ footer { background-color: var(--bg-gray); padding: 60px 60px; color: #000; }
     color: #999;
     font-size: 1.2rem;
 }
+
+/* --- KERANJANG & CHECKOUT --- */
+
+.cart-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 100px;
+}
+
+.cart-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.cart-subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Checkbox & Select All */
+.select-all-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Checkbox Styling (Agar kotak agak besar) */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--green-dark); /* Warna centang hijau */
+}
+
+/* Kartu Barang di Keranjang */
+.cart-item {
+    background: white;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Bayangan halus */
+}
+
+.item-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 40%;
+}
+
+.cart-img-box {
+    width: 70px;
+    height: 70px;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.cart-img-box img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.item-name {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* Kontrol Jumlah (Plus Minus) */
+.qty-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-qty {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: #f0f0f0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+}
+
+.qty-val {
+    font-weight: 600;
+}
+
+.item-price {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* Input Kode Promo */
+.promo-box {
+    position: relative;
+    margin: 40px 0;
+}
+
+.promo-box input {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: 1px solid #eee;
+    outline: none;
+    background: #fff;
+    font-size: 0.9rem;
+}
+
+.btn-promo-arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Total Box (Hijau Besar) */
+.total-bar {
+    background-color: #DDEBC0; /* Hijau muda pudar */
+    padding: 25px 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.total-price {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+/* Tombol Checkout Centered */
+.btn-checkout-center {
+    display: block;
+    width: 250px;
+    background-color: #AECBAE; /* Hijau sage */
+    padding: 15px;
+    text-align: center;
+    margin: 0 auto; /* Tengah */
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-checkout-center:hover {
+    background-color: #98bd98;
+}
+
+/* --- KHUSUS HALAMAN CHECKOUT --- */
+
+.checkout-summary {
+    background-color: #DDEBC0;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #cdcdcd;
+    font-size: 1.1rem;
+}
+
+.summary-row.last {
+    border-bottom: 2px solid #333; /* Garis tebal di Total */
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.payment-info p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* --- ADMIN PANEL STYLES --- */
+
+/* Reset khusus area admin agar background abu-abu */
+.admin-body {
+    background-color: #F5F7FA; /* Abu sangat muda */
+    display: flex;
+    min-height: 100vh;
+}
+
+/* 1. SIDEBAR (KIRI) */
+.sidebar {
+    width: 260px;
+    background-color: var(--green-dark);
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Supaya tetap diam saat discroll */
+    height: 100vh;
+    left: 0; top: 0;
+}
+
+.sidebar-brand {
+    margin-bottom: 50px;
+}
+.sidebar-brand h2 { font-size: 1.2rem; margin-bottom: 5px; }
+.sidebar-brand span { font-size: 0.8rem; color: #a3cbb0; }
+
+.sidebar-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: #a3cbb0; /* Hijau pudar */
+    padding: 12px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+
+.sidebar-menu a:hover, .sidebar-menu a.active {
+    background-color: #447a53; /* Hijau lebih terang sedikit */
+    color: white;
+}
+
+/* 2. MAIN CONTENT (KANAN) */
+.admin-content {
+    margin-left: 260px; /* Memberi ruang untuk sidebar */
+    width: 100%;
+    padding: 30px 50px;
+}
+
+/* Top Bar Admin */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.admin-avatar {
+    width: 50px; height: 50px;
+    background-color: var(--green-dark);
+    border-radius: 50%;
+}
+
+/* Dashboard Grid Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Kolom */
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* Kartu Statistik Putih */
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    position: relative;
+    border: 1px solid #eee;
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.stat-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-right: 5px;
+}
+.badge-gray { background: #E0E0E0; color: #555; }
+.badge-blue { background: #D0E1FD; color: #2F80ED; }
+.badge-green { background: #DDEBC0; color: #1E4D2B; }
+
+.stat-desc { font-size: 0.75rem; color: #888; }
+
+/* Chart Area (Perkembangan) */
+.chart-container {
+    grid-column: span 2; /* Mengambil 2 kolom lebar */
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+}
+
+/* Quarter Goal (Donut Chart Dummy) */
+.goal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.donut-chart {
+    width: 120px; height: 60px; /* Setengah lingkaran */
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border: 10px solid #FFCE56;
+    border-bottom: 0;
+    position: relative;
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.donut-text { font-size: 1.5rem; font-weight: 700; transform: translateY(5px); }
+
+/* Produk Terlaris & Kalender */
+.bottom-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Kiri lebih lebar */
+    gap: 30px;
+}
+
+.calendar-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+}
+
+/* Simple Calendar Table Styling */
+.calendar-table { width: 100%; text-align: center; font-size: 0.8rem; }
+.calendar-table th { color: #888; font-weight: 400; padding: 10px 0; }
+.calendar-table td { padding: 10px 0; font-weight: 500; }
+.active-date { background-color: #6C5DD3; color: white; border-radius: 50%; width: 30px; height: 30px; display: inline-flex; align-items: center; justify-content: center; }
+.purple-range { background-color: #E6E2FF; color: #6C5DD3; }

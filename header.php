@@ -21,6 +21,9 @@
         <a href="login.php" style="color: white; text-decoration: none;">
         <i class="ph ph-user"></i>
         </a>
+    
+        <a href="keranjang.php" style="color: white; text-decoration: none;">
         <i class="ph ph-shopping-cart"></i>
-        </div>
+        </a>
+</div>
     </nav>
