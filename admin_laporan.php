@@ -18,8 +18,7 @@
         <ul class="sidebar-menu">
             <li><a href="admin_dashboard.php"><i class="ph ph-squares-four"></i> Dashboard</a></li>
             <li><a href="admin_produk.php"><i class="ph ph-package"></i> Manajemen Produk</a></li>
-            <li><a href="#"><i class="ph ph-shopping-cart"></i> Kasir</a></li>
-            
+            <li><a href="admin_kasir.php"><i class="ph ph-shopping-cart"></i> Kasir</a></li>
             <li><a href="admin_laporan.php" class="active"><i class="ph ph-notebook"></i> Laporan Penjualan</a></li>
             
             <li style="margin-top: auto;">

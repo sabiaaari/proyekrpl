@@ -1496,3 +1496,73 @@ input[type="checkbox"] {
     font-size: 0.9rem;
     color: #666;
 }
+
+/* --- SIDEBAR & LAYOUT ADMIN UPDATE --- */
+
+/* 1. Sidebar Default (Terbuka) */
+.sidebar {
+    width: 260px;
+    background-color: var(--green-dark);
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    left: 0; top: 0;
+    transition: all 0.3s ease; /* Animasi Halus */
+    z-index: 100;
+    overflow: hidden; /* Agar teks tidak tumpah saat mengecil */
+}
+
+/* 2. Konten Utama Default */
+.admin-content {
+    margin-left: 260px; /* Memberi ruang sidebar */
+    width: calc(100% - 260px);
+    padding: 30px 50px;
+    transition: all 0.3s ease; /* Animasi Halus */
+}
+
+/* --- KONDISI SAAT SIDEBAR DITUTUP (COLLAPSED) --- */
+
+/* Sidebar mengecil jadi 80px */
+.sidebar.close {
+    width: 80px;
+    padding: 30px 10px; /* Padding dikurangi */
+}
+
+/* Sembunyikan Teks Logo dan Menu */
+.sidebar.close .sidebar-brand h2,
+.sidebar.close .sidebar-brand span,
+.sidebar.close .menu-text {
+    display: none; /* Hilangkan teks */
+    opacity: 0;
+}
+
+/* Tengahkan Icon saat ditutup */
+.sidebar.close .sidebar-menu a {
+    justify-content: center;
+    padding: 12px;
+}
+
+.sidebar.close .sidebar-menu i {
+    font-size: 1.5rem; /* Icon membesar sedikit */
+    margin-right: 0; /* Hapus jarak */
+}
+
+/* Konten Utama Melebar */
+.admin-content.expand {
+    margin-left: 80px;
+    width: calc(100% - 80px);
+}
+
+/* Tombol Garis Tiga (Hamburger) */
+#sidebarToggle {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+#sidebarToggle:hover {
+    background-color: #ddd;
+}

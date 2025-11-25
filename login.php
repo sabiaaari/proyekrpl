@@ -11,8 +11,6 @@ include 'header.php';
     </div>
 
     <?php 
-$page = 'login'; 
-include 'header.php'; 
 
 // SIMULASI LOGIN (Biasanya pakai Database, ini pakai PHP dasar)
 if(isset($_POST['email'])) {
